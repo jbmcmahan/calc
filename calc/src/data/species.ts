@@ -19,6 +19,7 @@ export interface SpeciesData {
   readonly otherFormes?: string[];
   readonly baseSpecies?: string;
   readonly abilities?: {0: string}; // ability
+  readonly innates?: [string] | [string, string] | [string, string, string];
 }
 
 const RBY: {[name: string]: SpeciesData} = {
