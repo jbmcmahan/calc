@@ -18,6 +18,7 @@ export class Pokemon implements State.Pokemon {
   level: number;
   gender?: I.GenderName;
   ability?: I.AbilityName;
+  innates?: [I.AbilityName] | [I.AbilityName, I.AbilityName] | [I.AbilityName, I.AbilityName, I.AbilityName];
   abilityOn?: boolean;
   isDynamaxed?: boolean;
   isSaltCure?: boolean;
@@ -59,6 +60,7 @@ export class Pokemon implements State.Pokemon {
     this.gender = options.gender || this.species.gender || 'M';
     this.ability = options.ability || this.species.abilities?.[0] || undefined;
     this.abilityOn = !!options.abilityOn;
+    this.innates = this.species.innates;
 
     this.isDynamaxed = !!options.isDynamaxed;
     this.isSaltCure = !!options.isSaltCure;
@@ -117,7 +119,13 @@ export class Pokemon implements State.Pokemon {
   }
 
   hasAbility(...abilities: string[]) {
-    return !!(this.ability && abilities.includes(this.ability));
+    for (const ability of abilities) {
+      if (this.ability ? this.ability == ability : false) return true;
+      if (this.innates ? this.innates.includes(ability as I.AbilityName) : false) return true;
+    }
+    return false;
+    // return !!(this.ability && abilities.includes(this.ability));
+
   }
 
   hasItem(...items: string[]) {
