@@ -1,5 +1,42 @@
-var SETDEX_SS = {"Abomasnow":{"Winstrate Victoria":{"level":43 ,"ability":"Soundproof","moves":["Wood Hammer","Ice Beam","Ice Shard","Earthquake"],"nature":"Hasty","item":"Lum Berry","index":345},"Bug Catcher Davis":{"level":95 ,"ability":"Soundproof","moves":["Wood Hammer","Ice Shard","Earthquake","Swords Dance"],"nature":"Adamant","item":"Ice Gem","index":1493},},
-"Abomasnow-Mega":{"Elite Four Glacia":{"level":100 ,"ability":"Snow Warning","moves":["Blizzard","Giga Drain","Focus Blast","Aurora Veil"],"nature":"Modest","item":"Abomasite","index":1597},"Elite Four GlaciaDouble":{"level":100 ,"ability":"Snow Warning","moves":["Blizzard","Giga Drain","Earth Power","Aurora Veil"],"nature":"Quiet","item":"Abomasite","ivs":{"sp":0,},"index":1604},},
+var SETDEX_SS = {
+    "Abomasnow":{
+        "Winstrate Victoria":{
+            "level":43 ,
+            "ability":"Soundproof",
+            "moves":["Wood Hammer","Ice Beam","Ice Shard","Earthquake"],
+            "nature":"Hasty",
+            "item":"Lum Berry",
+            "index":345
+        },
+        "Bug Catcher Davis":{
+            "level":95 ,
+            "ability":"Soundproof",
+            "moves":["Wood Hammer","Ice Shard","Earthquake","Swords Dance"],
+            "nature":"Adamant",
+            "item":"Ice Gem",
+            "index":1493
+        },
+    },
+    "Abomasnow-Mega":{
+        "Elite Four Glacia":{
+            "level":100 ,
+            "ability":"Snow Warning",
+            "moves":["Blizzard","Giga Drain","Focus Blast","Aurora Veil"],
+            "nature":"Modest",
+            "item":"Abomasite",
+            "index":1597
+        },
+        "Elite Four GlaciaDouble":{
+            "level":100 ,
+            "ability":"Snow Warning",
+            "moves":["Blizzard","Giga Drain","Earth Power","Aurora Veil"],
+            "nature":"Quiet",
+            "item":"Abomasite",
+            "ivs":{
+                "sp":0,
+            },
+            "index":1604},
+        },
 "Abra":{"Twins Gina And Mia":{"level":20 ,"ability":"Magic Guard","moves":["Psybeam","Dazzling Gleam"],"nature":"Timid","item":"Lum Berry","index":97},},
 "Absol":{"Triathlete Alyssa":{"level":36 ,"ability":"Super Luck","moves":["Knock Off","Close Combat","Play Rough","Counter"],"nature":"Jolly","item":"Focus Sash","index":241},"Team Magma Grunt Magma Hideout #4":{"level":76 ,"ability":"Super Luck","moves":["Night Slash","Stone Edge","Psycho Cut","Fire Blast"],"nature":"Hasty","item":"Scope Lens","index":954},},
 "Absol-Mega":{"Magma Admin Tabitha Mt Chimney":{"level":54 ,"ability":"Magic Bounce","moves":["Knock Off","Psycho Cut","Fire Blast","Ice Beam"],"nature":"Naive","item":"Absolite","index":518},"Magma Admin Tabitha Magma Hideout":{"level":79 ,"ability":"Magic Bounce","moves":["Night Slash","Sucker Punch","Close Combat","Swords Dance"],"nature":"Jolly","item":"Absolite","index":1008},},
