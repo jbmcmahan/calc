@@ -491,7 +491,7 @@ export function handleFixedDamageMoves(attacker: Pokemon, move: Move, defender: 
     return 40;
   } else if (move.named('Sonic Boom')) {
     return 20;
-  } else if (move.named('Super Fang')){
+  } else if (move.named('Super Fang')) {
     return Math.floor(defender.originalCurHP / 2) > 0 ? Math.floor(defender.originalCurHP / 2) : 1;
   }
   return 0;

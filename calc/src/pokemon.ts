@@ -18,7 +18,8 @@ export class Pokemon implements State.Pokemon {
   level: number;
   gender?: I.GenderName;
   ability?: I.AbilityName;
-  innates?: [I.AbilityName] | [I.AbilityName, I.AbilityName] | [I.AbilityName, I.AbilityName, I.AbilityName];
+  innates?: [I.AbilityName] | [I.AbilityName, I.AbilityName] |
+  [I.AbilityName, I.AbilityName, I.AbilityName];
   abilityOn?: boolean;
   isDynamaxed?: boolean;
   isSaltCure?: boolean;
@@ -120,12 +121,10 @@ export class Pokemon implements State.Pokemon {
 
   hasAbility(...abilities: string[]) {
     for (const ability of abilities) {
-      if (this.ability ? this.ability == ability : false) return true;
+      if (this.ability ? this.ability === ability : false) return true;
       if (this.innates ? this.innates.includes(ability as I.AbilityName) : false) return true;
     }
     return false;
-    // return !!(this.ability && abilities.includes(this.ability));
-
   }
 
   hasItem(...items: string[]) {
