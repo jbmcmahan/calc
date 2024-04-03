@@ -126,7 +126,10 @@ export interface Specie extends Data<SpeciesName> {
     readonly abilities?: {
         0: AbilityName | '';
     };
-    readonly innates?: [AbilityName] | [AbilityName, AbilityName] | [AbilityName, AbilityName, AbilityName];
+    readonly innates?: [AbilityName] | [
+        AbilityName,
+        AbilityName
+    ] | [AbilityName, AbilityName, AbilityName];
 }
 export interface Types {
     get(id: ID): Type | undefined;

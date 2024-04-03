@@ -106,7 +106,7 @@ var Pokemon = (function () {
         try {
             for (var abilities_1 = __values(abilities), abilities_1_1 = abilities_1.next(); !abilities_1_1.done; abilities_1_1 = abilities_1.next()) {
                 var ability = abilities_1_1.value;
-                if (this.ability ? this.ability == ability : false)
+                if (this.ability ? this.ability === ability : false)
                     return true;
                 if (this.innates ? this.innates.includes(ability) : false)
                     return true;
