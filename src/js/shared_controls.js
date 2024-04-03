@@ -494,9 +494,9 @@ $(".set-selector").change(function () {
 				var newPoke = document.createElement("img");
 				newPoke.className = "opposite-pok right-side";
 				newPoke.src = 'https://raw.githubusercontent.com/May8th1995/sprites/master/' + pok_name + '.png';
-				newPoke.title = `${next_poks[i]}, ${next_poks[i]} BP`;
-				nextTrainer=`${next_poks[i]}`
-				newPoke.dataset.id = `${CURRENT_TRAINER_POKS[i].split("]")[1]}`;
+				newPoke.title = next_poks[i] + ',' + next_poks[i] + ' BP';
+				nextTrainer = next_poks[i] + '';
+				newPoke.dataset.id = CURRENT_TRAINER_POKS[i].split("]")[1] + '';
 				frag.append(newPoke);
 			}
 		}

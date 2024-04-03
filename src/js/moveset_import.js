@@ -392,7 +392,7 @@ $("#clearSets").click(function () {
 	localStorage.removeItem("customsets");
 	$(allPokemon("#importedSetsOptions")).hide();
 	loadDefaultLists();
-	for (var zone of document.getElementsByClassName("dropzone")){
+	for (var zone in document.getElementsByClassName("dropzone")){
 		zone.innerHTML="";
 	}
 
