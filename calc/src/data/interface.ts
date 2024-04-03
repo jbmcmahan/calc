@@ -148,8 +148,8 @@ export interface Specie extends Data<SpeciesName> {
   readonly otherFormes?: SpeciesName[];
   readonly baseSpecies?: SpeciesName;
   readonly abilities?: {0: AbilityName | ''};
-  readonly innates?: [AbilityName] | 
-    [AbilityName, AbilityName] | [AbilityName, AbilityName, AbilityName];
+  readonly innates?: [AbilityName] |
+  [AbilityName, AbilityName] | [AbilityName, AbilityName, AbilityName];
 }
 
 export interface Types {
