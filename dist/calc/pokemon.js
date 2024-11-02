@@ -41,6 +41,7 @@ var Pokemon = (function () {
         this.gender = options.gender || this.species.gender || 'M';
         this.ability = options.ability || ((_b = this.species.abilities) === null || _b === void 0 ? void 0 : _b[0]) || undefined;
         this.abilityOn = !!options.abilityOn;
+        this.innates = this.species.innates;
         this.isDynamaxed = !!options.isDynamaxed;
         this.isSaltCure = !!options.isSaltCure;
         this.alliesFainted = options.alliesFainted;
@@ -97,11 +98,28 @@ var Pokemon = (function () {
             : this.originalCurHP;
     };
     Pokemon.prototype.hasAbility = function () {
+        var e_2, _a;
         var abilities = [];
         for (var _i = 0; _i < arguments.length; _i++) {
             abilities[_i] = arguments[_i];
         }
-        return !!(this.ability && abilities.includes(this.ability));
+        try {
+            for (var abilities_1 = __values(abilities), abilities_1_1 = abilities_1.next(); !abilities_1_1.done; abilities_1_1 = abilities_1.next()) {
+                var ability = abilities_1_1.value;
+                if (this.ability ? this.ability === ability : false)
+                    return true;
+                if (this.innates ? this.innates.includes(ability) : false)
+                    return true;
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (abilities_1_1 && !abilities_1_1.done && (_a = abilities_1["return"])) _a.call(abilities_1);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
+        return false;
     };
     Pokemon.prototype.hasItem = function () {
         var items = [];
@@ -118,7 +136,7 @@ var Pokemon = (function () {
         return !!(this.status && statuses.includes(this.status));
     };
     Pokemon.prototype.hasType = function () {
-        var e_2, _a;
+        var e_3, _a;
         var types = [];
         for (var _i = 0; _i < arguments.length; _i++) {
             types[_i] = arguments[_i];
@@ -130,17 +148,17 @@ var Pokemon = (function () {
                     return true;
             }
         }
-        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        catch (e_3_1) { e_3 = { error: e_3_1 }; }
         finally {
             try {
                 if (types_1_1 && !types_1_1.done && (_a = types_1["return"])) _a.call(types_1);
             }
-            finally { if (e_2) throw e_2.error; }
+            finally { if (e_3) throw e_3.error; }
         }
         return false;
     };
     Pokemon.prototype.hasOriginalType = function () {
-        var e_3, _a;
+        var e_4, _a;
         var types = [];
         for (var _i = 0; _i < arguments.length; _i++) {
             types[_i] = arguments[_i];
@@ -152,12 +170,12 @@ var Pokemon = (function () {
                     return true;
             }
         }
-        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+        catch (e_4_1) { e_4 = { error: e_4_1 }; }
         finally {
             try {
                 if (types_2_1 && !types_2_1.done && (_a = types_2["return"])) _a.call(types_2);
             }
-            finally { if (e_3) throw e_3.error; }
+            finally { if (e_4) throw e_4.error; }
         }
         return false;
     };

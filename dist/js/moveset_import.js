@@ -323,10 +323,8 @@ function addSets(pokes, name) {
 				currentPoke = getStats(currentPoke, rows, i + 1);
 				currentPoke = getMoves(currentPoke, rows, i);
 				if (currentPoke.nature == "-") {
-					console.log(currentPoke.nature)
 					currentPoke.nature = "Serious";
 				}
-				console.log(currentPoke.nature)
 				pokelist.push(currentPoke);
 				addedpokes++;
 				break;
@@ -394,7 +392,7 @@ $("#clearSets").click(function () {
 	localStorage.removeItem("customsets");
 	$(allPokemon("#importedSetsOptions")).hide();
 	loadDefaultLists();
-	for (let zone of document.getElementsByClassName("dropzone")){
+	for (var zone in document.getElementsByClassName("dropzone")){
 		zone.innerHTML="";
 	}
 

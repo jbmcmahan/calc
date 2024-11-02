@@ -9,6 +9,11 @@ export declare class Pokemon implements State.Pokemon {
     level: number;
     gender?: I.GenderName;
     ability?: I.AbilityName;
+    innates?: [I.AbilityName] | [I.AbilityName, I.AbilityName] | [
+        I.AbilityName,
+        I.AbilityName,
+        I.AbilityName
+    ];
     abilityOn?: boolean;
     isDynamaxed?: boolean;
     isSaltCure?: boolean;
